@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Cars</title>
+    <script src="foundcar.js"></script>
+	<link rel="stylesheet" href="foundcar.css">
+</head>
+<body>
+    
+<h1>Busca seu carro aqui!</h1>
+<div class="Buscar">	
+<input type="text" name="buscar" placeholder="Digite o código cadastro" id="car">
+<!-- Ao preencher o campo acima e clica no botão "Buscar", o programa ele vai chamar a função "FoundCEP". Nessa função, ele vai buscar os dados-->
+<button class="button" onclick="FoundCar()">Buscar</button>
+</div>
+<form name="meuForm" method="post" id="formulario">
+	<div class="box">
+		<h1>Dados do carro:</h1>
+
+		<label>
+			<span>Codigo de cadastro</span>
+ 			<input type="text" id="id"/> 
+
+		</label>
+        
+        
+        <label>
+			<span>Modelo</span>
+ 			<input type="text" id="modelo"/> 
+
+		</label>
+
+		<label>
+ 			<span>Marca</span>
+			<input type="text" id="marca"/>
+		 </label>
+
+		<label>
+ 			<span>Preço</span>
+			<input type="text" id="preco"/>
+		</label>
+
+		<label>
+			 <span>Ano</span>
+			<input type="text" id="ano" />
+		</label>
+	</div>
+</form>    
+    
+</body>
+</html>

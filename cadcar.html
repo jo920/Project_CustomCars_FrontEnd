@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="cadcar.js"></script>
+    <link rel="stylesheet" href="cadcar.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <title>Custom Cars</title>
+</head>
+<body>
+	<section>
+		<aside class="sidebar">
+			<div class="logo">
+			  <h2>Custom Cars</h2>
+			</div>
+			<ul class="links">
+			  <li>
+				<span class="material-symbols-outlined">dashboard</span>
+				<a href="home.html">Pagina Principal</a>
+			  </li>
+			  <li>
+				<span class="material-symbols-outlined">Person</span>
+				<a href="foundcliente.html">Seu Perfil</a>
+			  </li>
+			  <li>
+				<span class="material-symbols-outlined">Add</span>
+				<a href="cadcar.html">Cadastre seu carro</a>
+			  </li>
+			  <li>
+				<span class="material-symbols-outlined">orders</span>
+				<a href="#">Seus Pedidos</a>
+			  </li>
+			  <li>
+				<span class="material-symbols-outlined">Contacts</span>
+				<a href="#">Contatos</a>
+			  </li>
+			
+			  <li class="logout-link">
+				<span class="material-symbols-outlined">logout</span>
+				<a href="login.html">Sair</a>
+			  </li>
+			</ul>
+		  </aside>
+</section>
+
+
+<div class="container"> 
+	<h1>Custom Car, melhor site para compra e venda de automóveis</h1>
+		<form name="meuForm" method="post" id="formulario">
+			<div class="box">
+				<p>Para cadastrar seu carro, preencha os dados abaixo:</p>
+					<label>
+						<span>Modelo</span>
+						<input type="text" id="modelo"/> 
+					</label>
+					<label>
+						<span>Marca</span>
+						<input type="text" id="marca"/>
+					</label>
+					<label>
+						<span>Preço</span>
+						<input type="text" id="preco"/>
+					</label>
+					<label>
+						<span>Ano</span>
+						<input type="text" id="ano" />
+					</label>
+					<!-- 
+					// estou implementando a funcionalidade
+					<label>
+						<span>Importado ou Nacional?</span>
+						<form id="form1">
+							<INPUT TYPE="RADIO" NAME="OPCAO1" VALUE="IMPORTADO"> Importado
+							<INPUT TYPE="RADIO" NAME="OPCAO1" VALUE="NACIONAL"> Nacional
+						</form>
+				</label> -->
+				<!-- <label>
+						<span>Qual moeda?</span>
+							<form id="form2">
+								<INPUT TYPE="RADIO"  NAME="OPCAO2" VALUE="R$">R$
+								<INPUT TYPE="RADIO" NAME="OPCAO2" VALUE="USD$">USD$
+								<INPUT TYPE="RADIO" NAME="OPCAO2" VALUE="EUR">EUR
+							</form>
+					</label> -->
+
+			</div>
+		</form>   
+
+		<button class="button" onclick="Cadastro()">Cadastrar</button>
+</div>
+
+</body>
+</html>

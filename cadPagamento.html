@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Cars</title>
+    <link rel="stylesheet" href="cadPagamento.css">
+    <script src="cadPagamento.js"></script>
+</head>
+<body>
+
+    <div class="container_pagamento">
+
+        <h1>Custom Car, melhor site para compra de automóveis</h1>
+            <form name="meuForm" method="post" id="formulario">
+                <div class="box">
+                    <p>Faça seu pagamento aqui</p>
+    
+                    <label>
+                        <span>Banco</span>
+                        <input type="number" id="banc"/> 
+    
+                    </label>
+    
+                    <label>
+                        <span>Agência</span>
+                        <input type="number" id="agen"/>
+                    </label>
+    
+                    <label>
+                        <span>Conta Corrente</span>
+                        <input type="number" id="cc"/>
+                    </label>
+    
+                    <label>
+                        <span>Pedido</span>
+                        <input type="number" id="ped" />
+                    </label>   
+    
+                </div>
+                <button class="buttonPag" onclick="efetuaPagamento()">Concluir Pagamento</button>		
+            </form>
+            
+    </div>
+
+    
+</body>
+</html>

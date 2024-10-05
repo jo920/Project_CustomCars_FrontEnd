@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Cars</title>
+</head>
+<body>
+
+    <h1>Cadastro do cliente</h1>
+    <div class="Buscar">	
+    <input type="text" name="buscar" placeholder="Digite o seu id" id="cpf">
+    <!-- Ao preencher o campo acima e clica no botão "Buscar", o programa ele vai chamar a função "FoundCEP". Nessa função, ele vai buscar os dados-->
+    <button class="button" onclick="">Buscar</button>
+    </div>
+    <form name="meuForm" method="post" id="formulario">
+        <div class="box">
+            <h1>Segue seus dados:</h1>
+    
+            <label>
+                <span>Nome Completo:</span>
+                 <input type="text" id="name"/> 
+    
+            </label>
+    
+            <label>
+                 <span>CPF</span>
+                <input type="text" id="cpf"/>
+             </label>
+    
+            <label>
+                 <span>Data de Nascimento</span>
+                <input type="date" id="dt_nasc"/>
+            </label>
+    
+            <label>
+                 <span>E-mail</span>
+                <input type="email" id="email" />
+            </label>
+    
+            <label>
+                <span>Senha</span>
+               <input type="password" id="senha" />
+    
+            <label>
+                <span>Confirmação de Senha</span>
+               <input type="password" id="confsenha" />
+            </label>
+               
+            <label>
+                <span>CEP</span>
+               <input type="number" id="cep" />     
+            </label>
+        </div>
+    </form>        
+    <div class="button">
+       <button class="update" onclick="">Alterar</button>
+       <button class="delete" onclick="">Deletar</button>
+    </div>
+    
+</body>
+</html>
