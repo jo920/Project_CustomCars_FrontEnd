@@ -30,7 +30,7 @@
 		  </li>
 		  <li>
 			<span class="material-symbols-outlined">orders</span>
-			<a href="">Seus Pedidos</a>
+			<a href="foundPedido.html">Seus Pedidos</a>
 		  </li>
 		  <li>
 			<span class="material-symbols-outlined">Contacts</span>
@@ -66,16 +66,16 @@
 
 				<label>
 					<span>Cliente(digite seu ID cadastrado):</span>
-					<input type="number" id="cliente"/>
+					<input type="text" id="client-id-input" placeholder="Digite seu ID" />
 				</label>
 
 				<label>
 					<span>Digite o ID do carro que deseja comprar:</span>
-					<input type="number" id="carro" />
+					<input type="text" id="car-id-input" placeholder="Digite o ID do carro que deseja">
 				</label>   
 
 			</div>
-			<button class="buttonPedido" onclick="CadastrarPedido()">Cadastrar Pedido</button>		
+			<button class="buttonPedido" type="button" onclick="CadastrarPedido()">Cadastrar Pedido</button>		
 		</form>
 		
 	</div>

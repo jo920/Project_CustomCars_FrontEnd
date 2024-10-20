@@ -20,16 +20,8 @@
 				<a href="home.html">Pagina Principal</a>
 			  </li>
 			  <li>
-				<span class="material-symbols-outlined">Person</span>
-				<a href="foundcliente.html">Seu Perfil</a>
-			  </li>
-			  <li>
 				<span class="material-symbols-outlined">Add</span>
 				<a href="cadcar.html">Cadastre seu carro</a>
-			  </li>
-			  <li>
-				<span class="material-symbols-outlined">orders</span>
-				<a href="#">Seus Pedidos</a>
 			  </li>
 			  <li>
 				<span class="material-symbols-outlined">Contacts</span>
@@ -44,12 +36,16 @@
 		  </aside>
 </section>
 
-
 <div class="container"> 
 	<h1>Custom Car, melhor site para compra e venda de automóveis</h1>
 		<form name="meuForm" method="post" id="formulario">
 			<div class="box">
 				<p>Para cadastrar seu carro, preencha os dados abaixo:</p>
+				    <label>
+						<span>Foto do carro</span>
+						<input type="url" id="img" placeholder="Coloque o link da imagem"/>  
+					</label>		
+				
 					<label>
 						<span>Modelo</span>
 						<input type="text" id="modelo"/> 
@@ -66,23 +62,15 @@
 						<span>Ano</span>
 						<input type="text" id="ano" />
 					</label>
-					<!-- 
-					// estou implementando a funcionalidade
 					<label>
-						<span>Importado ou Nacional?</span>
-						<form id="form1">
-							<INPUT TYPE="RADIO" NAME="OPCAO1" VALUE="IMPORTADO"> Importado
-							<INPUT TYPE="RADIO" NAME="OPCAO1" VALUE="NACIONAL"> Nacional
-						</form>
-				</label> -->
-				<!-- <label>
-						<span>Qual moeda?</span>
-							<form id="form2">
-								<INPUT TYPE="RADIO"  NAME="OPCAO2" VALUE="R$">R$
-								<INPUT TYPE="RADIO" NAME="OPCAO2" VALUE="USD$">USD$
-								<INPUT TYPE="RADIO" NAME="OPCAO2" VALUE="EUR">EUR
-							</form>
-					</label> -->
+						<span>IMPORTADO/NACIONAL?</span>
+						<input type="text" id="nac" />
+					</label>
+					<label>
+						<span>Moeda de Câmbio(se o carro for importado, qual a moeda de cotação?)</span>
+						<input type="text" id="cambio" placeholder="DOLAR ou EURO ?" />
+					</label>
+					
 
 			</div>
 		</form>   

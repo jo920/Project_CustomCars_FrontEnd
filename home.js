@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log("Criando card para o carro:", car); // Log para verificar o carro retornado
 
         // Verificar se car.img é válido (não "null" e não vazio)
-        const imageUrl = car.img && car.img !== 'null' ? car.img : 'https://via.placeholder.com/300x200.png?text=No+Image+Available';
+        const imageUrl = car.img && car.img.trim !== 'null' ? car.img : 'https://via.placeholder.com/300x200.png?text=No+Image+Available';
         console.log("URL da imagem:", imageUrl); // Log para verificar a URL de imagem usada
     
         // Criar o elemento div do card
@@ -39,13 +39,27 @@ document.addEventListener("DOMContentLoaded", function() {
         card.appendChild(title);
         card.appendChild(description);
     
+        // Tornar o card clicável, redirecionando para cadPedido.html com o ID do carro
+        card.addEventListener('click', function() {
+            window.location.href = `cadPedido.html?id=${car.id}`; // Passa o ID do carro na URL
+        });
+
         // Adicionar o card ao container
         cardContainer.appendChild(card);
     }
 
     // Função para buscar todos os carros da API
     function fetchAllCars() {
-        fetch('http://localhost:8080/car')
+        const token = localStorage.getItem('token');
+        
+        console.log('Token recuperado:', token);
+        
+        fetch('http://localhost:8080/car', {
+            method: 'GET',
+            headers: {
+              'Authorization': `Bearer ${token}`, // Usa o token no cabeçalho Authorization
+              'Content-Type': 'application/json'
+            }})
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Erro ao buscar dados: ' + response.statusText);

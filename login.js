@@ -1,34 +1,36 @@
-function Login(){
+function Login() {
+  const login = {
+    login: document.getElementById("login").value,
+    senha: document.getElementById("senha").value  
+  };
 
-var cpf     = document.getElementById("cpf").value;
-var senha  = document.getElementById("senha").value;
+  const param = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(login)
+  };
 
-
-if (cpf != null || senha != null){
-
-    fetch('http://localhost:8080/login/' + cpf + '/' + senha)
+  fetch('http://localhost:8080/login', param)
     .then(response => {
       if (!response.ok) {
-        // Se a resposta não for bem-sucedida (código de status não está entre 200 e 299)  
-        throw new Error(alert( "Falha no Login, verifique o usuário e senha digitados. Status: "+ response.status));
-
-      }else{
-          
-          alert("Login efetuado com sucesso!");
-          window.open("C:/Users/joaoh/OneDrive/%C3%81rea%20de%20Trabalho/API_CAR/home.html");
-
+        throw new Error('Erro ao fazer login');
       }
-    }).catch(error => {
-      // Manipule os erros da requisição
-      console.error('Erro ao executar a rotina. Verifique: ', error);
+      return response.text(); // Use text() para pegar a resposta como string
+    })
+    .then(token => {
+      console.log('Login efetuado com sucesso!', token);
+      // Armazene o token para uso futuro
+       localStorage.setItem('token', token);
+       window.location.href = 'home.html';
+    })
+    .catch(error => {
+      console.error("Ocorreu um erro ao executar a rotina: " + error);
     });
+  }
 
-} else {
 
-    alert("CPF e Senha não podem está nulos. Preencha-os!");
-}
-  
-}
 
 //função está em manutenção 
 function ForgotPassword(){
@@ -55,7 +57,7 @@ fetch(url,param)
   }else {
 
     alert("Senha alterada com sucesso. Voce sera direcionado para a tela de login");
-    window.open("C:/Users/joaoh/OneDrive/%C3%81rea%20de%20Trabalho/API_CAR/Login/login.html");
+    window.location.href = 'login.html';
 
 
   }}).catch(error => {
